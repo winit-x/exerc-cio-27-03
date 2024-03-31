@@ -1,0 +1,34 @@
+Algoritmo "Cálculo de Progressão Aritmética (PA)"
+Var
+   primeiro_termo, diferenca_comum, num_termos, contador: Inteiro
+   pa: Vetor de Real
+   termo_atual: Real
+
+Inicio
+   
+   Funcao gerar_pa(primeiro_termo, diferenca_comum, num_termos: Inteiro): Vetor de Real
+      Var
+         pa: Vetor de Real
+         termo_atual: Real
+
+      termo_atual <- primeiro_termo
+
+      Para contador de 1 ate num_termos faca
+         pa[contador] <- termo_atual
+         termo_atual <- termo_atual + diferenca_comum
+      Fim Para
+
+      Retorne pa
+   Fim Funcao
+
+   primeiro_termo <- 5
+   diferenca_comum <- 3
+   num_termos <- 10
+
+   
+   resultado_pa <- gerar_pa(primeiro_termo, diferenca_comum, num_termos)
+
+  
+   Escreva("Progressão Aritmética (PA): ", resultado_pa)
+
+Fim

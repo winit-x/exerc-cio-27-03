@@ -1,0 +1,34 @@
+Algoritmo "Cálculo de Raízes de uma Equação do Segundo Grau"
+Var
+   a, b, c, discriminante, raiz1, raiz2, raizes: Real
+
+Inicio
+   
+   Leia(a)
+   Leia(b)
+   Leia(c)
+
+   
+   discriminante <- b ** 2 - 4 * a * c
+
+   
+   Se discriminante > 0 Entao
+      raiz1 <- (-b + RaizQuadrada(discriminante)) / (2 * a)
+      raiz2 <- (-b - RaizQuadrada(discriminante)) / (2 * a)
+      Escreva("As raízes da equação do segundo grau ", a, "x^2 + ", b, "x + ", c, " são:")
+      Escreva("Raiz 1: ", raiz1)
+      Escreva("Raiz 2: ", raiz2)
+   Senao Se discriminante = 0 Entao
+      raiz <- -b / (2 * a)
+      Escreva("A equação possui uma única raiz real:")
+      Escreva("Raiz: ", raiz)
+   Senao
+      parteReal <- -b / (2 * a)
+      parteImaginaria <- RaizQuadrada(Absoluto(discriminante)) / (2 * a)
+      raiz1 <- Concatenar(parteReal, " + ", parteImaginaria, "i")
+      raiz2 <- Concatenar(parteReal, " - ", parteImaginaria, "i")
+      Escreva("As raízes da equação do segundo grau ", a, "x^2 + ", b, "x + ", c, " são:")
+      Escreva("Raiz 1: ", raiz1)
+      Escreva("Raiz 2: ", raiz2)
+   Fim Se
+Fim

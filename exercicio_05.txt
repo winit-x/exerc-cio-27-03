@@ -1,0 +1,32 @@
+Algoritmo "Cálculo de Média Ponderada"
+Var
+   pesos: Vetor de Inteiro
+   notas: Vetor de Real
+   soma_ponderada, peso_total, media_ponderada: Real
+   i: Inteiro
+
+Inicio
+   
+   pesos <- [2, 3, 4, 1, 2]
+   notas <- [8, 7, 9, 6, 8]
+
+   
+   soma_ponderada <- 0
+
+   
+   Para i de 0 ate tamanho(pesos) faca
+      soma_ponderada <- soma_ponderada + pesos[i] * notas[i]
+   Fim Para
+
+   
+   peso_total <- 0
+   Para i de 0 ate tamanho(pesos) faca
+      peso_total <- peso_total + pesos[i]
+   Fim Para
+
+   
+   media_ponderada <- soma_ponderada / peso_total
+
+   
+   Escreva("A média ponderada das 5 avaliações é: ", media_ponderada)
+Fim

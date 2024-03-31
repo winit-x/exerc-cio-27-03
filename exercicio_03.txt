@@ -1,0 +1,33 @@
+Algoritmo "Cálculo de Média, Soma, Maior e Menor Valor"
+Var
+   num_valores, contador: Inteiro
+   soma_total, valor_minimo, valor_maximo, media: Real
+   valor: Real
+
+Inicio
+   num_valores <- 10
+   soma_total <- 0
+   valor_minimo <- infinito
+   valor_maximo <- -infinito
+   contador <- 0
+
+   Escreva("Digite valores (Ctrl+D para encerrar a entrada):")
+
+   Enquanto contador < num_valores faca
+      Leia(valor)
+
+      Se valor > 200 Entao
+         contador <- contador + 1
+         soma_total <- soma_total + valor
+         valor_minimo <- Minimo(valor_minimo, valor)
+         valor_maximo <- Maximo(valor_maximo, valor)
+      Fim Se
+   Fim Enquanto
+
+   media <- soma_total / num_valores
+
+   Escreva("Média dos 10 valores: ", media)
+   Escreva("Soma dos valores: ", soma_total)
+   Escreva("Maior valor aceito: ", valor_maximo)
+   Escreva("Menor valor aceito: ", valor_minimo)
+Fim

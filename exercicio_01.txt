@@ -1,0 +1,48 @@
+Algoritmo "Cálculo de Áreas"
+Var
+   base1, base2, altura, diagonal1, diagonal2, comprimento, largura, areaTrapezio, areaLosango, areaRetangulo: Real
+
+Inicio
+   
+   Funcao calcular_area_trapezio(base1, base2, altura: Real): Real
+      Retorne ((base1 + base2) * altura) / 2
+   Fim Funcao
+
+   
+   Funcao calcular_area_losango(diagonal1, diagonal2: Real): Real
+      Retorne (diagonal1 * diagonal2) / 2
+   Fim Funcao
+
+   
+   Funcao calcular_area_retangulo(comprimento, largura: Real): Real
+      Retorne comprimento * largura
+   Fim Funcao
+
+   
+   base1 <- 10
+   base2 <- 6
+   altura <- 4
+   diagonal1 <- 8
+   diagonal2 <- 6
+   comprimento <- 12
+   largura <- 8
+
+   
+   areaTrapezio <- calcular_area_trapezio(base1, base2, altura)
+   areaLosango <- calcular_area_losango(diagonal1, diagonal2)
+   areaRetangulo <- calcular_area_retangulo(comprimento, largura)
+
+   
+   Escreva("Área do trapézio: ", areaTrapezio)
+   Escreva("Área do losango: ", areaLosango)
+   Escreva("Área do retângulo: ", areaRetangulo)
+
+   
+   Se areaTrapezio > areaLosango E areaTrapezio > areaRetangulo Entao
+      Escreva("O trapézio tem a maior área.")
+   Senao Se areaLosango > areaRetangulo Entao
+      Escreva("O losango tem a maior área.")
+   Senao
+      Escreva("O retângulo tem a maior área.")
+   Fim Se
+Fim
